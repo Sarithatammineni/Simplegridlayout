@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+}
+
+.grid-container {
+    width: 80%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.box {
+    height: 120px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Colors based on your image */
+.box1 { background-color: #00C4FF; } /* Light Blue */
+.box2 { background-color: #FF4500; } /* Orange */
+.box3 { background-color: #4977E8; } /* Blue */
+.box4 { background-color: #FFD700; } /* Yellow */
+.box5 { background-color: #9A32FF; } /* Purple */
+.box6 { background-color: #32CD32; } /* Green */
+.box7 { background-color: #FF8A65; } /* Peach */
+.box8 { background-color: #26A69A; } /* Teal */
+.box9 { background-color: #6A0000; } /* Dark Red */
