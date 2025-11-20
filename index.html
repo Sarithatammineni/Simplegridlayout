@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Grid Layout</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <header>
+        <div class="logo">My Portfolio</div>
+        <div id="menu-toggle">☰</div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="grid-container">
-        <div class="box box2">2.</div>
-        <div class="box box3">3.</div>
-        <div class="box box4">4.</div>
+    <section class="hero" id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm a passionate developer who enjoys building clean and responsive websites.</p>
+        <button>Contact Me</button>
+    </section>
 
-        <div class="box box5">5.</div>
-        <div class="box box6">6.</div>
-        <div class="box box1">1.</div>
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">Java</div>
+            <div class="skill-box">C Programming</div>
+            <div class="skill-box">SQL</div>
+        </div>
+    </section>
 
-        <div class="box box7">7.</div>
-        <div class="box box8">8.</div>
-        <div class="box box9">9.</div>
-    </div>
+    <footer>
+        <p>Connect with me:</p>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Twitter</a>
+    </footer>
 
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
