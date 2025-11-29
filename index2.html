@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive DIV Updater</title>
+    <style>
+        #box {
+            width: 300px;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: lightgray;
+            font-size: 18px;
+        }
+    </style>
+</head> 
+<body>
+
+    <h2>DIV Controller</h2>
+
+    <input type="text" id="color-input" placeholder="Enter color name">
+    <br><br>
+
+    <input type="text" id="text-input" placeholder="Enter text to update">
+    <br><br>
+
+    <button id="bg-btn">Change Background</button>
+    <button id="text-btn">Update Text</button>
+
+
+    <div id="box">This is the default content.</div>
+
+    <script>
+
+        const box = document.getElementById('box');
+        const colorInput = document.getElementById('color-input');
+        const textInput = document.getElementById('text-input');
+
+        function isValidColor(color) {
+            const test = document.createElement('span');
+            test.style.color = color;
+            return test.style.color !== '';
+        }
+
+        // 1. Change Background Button
+        document.getElementById('bg-btn').addEventListener('click', () => {
+            const color = colorInput.value.trim();
+
+            if (isValidColor(color)) {
+                box.style.backgroundColor = color;
+            } else {
+                alert("Invalid color name!");
+            }
+        });
+
+        // 2. Update Text Button
+        document.getElementById('text-btn').addEventListener('click', () => {
+            const text = textInput.value.trim();
+
+            if (text === '') {
+                alert("Please enter some text!");
+            } else {
+                box.textContent = text;
+            }
+        });
+
+    </script>
+
+</body>
+</html>
